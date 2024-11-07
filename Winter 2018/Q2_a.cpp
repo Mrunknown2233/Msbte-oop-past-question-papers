@@ -1,26 +1,19 @@
-#include <iostream.h>
-#include <conio.h>
-#define MAX 100
-
-void main()
+#include <iostream>
+using namespace std;
+int main(void)
 {
-	clrscr();
-	
-
-	int a[MAX];
-
-	cout<<"\nEnter the elements in the array 1 by 1 : ";
-	for(int i = 0 ; i<5 ; i++)
-		cin>>a[i];
-
-	int smallest = 32767;
-	for(i=0;i<5;i++)
-	{
-		if(smallest>a[i])
-			smallest=a[i];
-	}
-
-	cout<<"\nThe smallest no in the array is : "<<smallest;
-	getch();
+  int smallest,x[5],i;
+  cout<<"\nEnter the elements of the array 1 by 1:\n ";
+  for( i = 0;i<5;i++)
+    cin>>x[i];
+  cout<<"\nElements of the array are : ";
+  for(i=0;i<5;i++)
+    cout<<" "<<x[i];
+  smallest = x[0];
+  for(i=0;i<5;i++)
+  {
+    if(x[i]<smallest)
+      smallest=x[i];
+  }
+  cout<<"\nThe smallest element in the array is : "<<smallest;
 }
-
